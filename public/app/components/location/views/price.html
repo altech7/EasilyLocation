@@ -1,0 +1,182 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" class="fa fa-euro"></span>
+        </h1>
+    </div>
+    <div class="panel-body no-padding">
+
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Tourisme">
+                    <md-content class="md-padding">
+                        <form class="form-horizontal" name="priceForm.tourism">
+                            <md-input-container class="col-md-9">
+                                <label>Liste de prix</label>
+                                <md-select ng-model="priceGeneratorCtrl.itemToAdd" required="required">
+
+                                    <md-optgroup label="Catégorie 1">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catOne">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie 2">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catTwo">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie 3">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catThree">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie 4">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catFour">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie 5">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catFive">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie 6">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.tourism.catSix">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="col-md-2">
+                                <md-button class="md-raised" ng-click="priceGeneratorCtrl.addCurrentItem()"
+                                           ng-disabled="priceForm.tourism.$invalid">Ajouter
+                                </md-button>
+                            </md-input-container>
+                        </form>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Utilitaire">
+                    <md-content class="md-padding">
+                        <form class="form-horizontal" name="priceForm.utility">
+                            <md-input-container class="col-md-9">
+                                <label>Liste de prix</label>
+                                <md-select ng-model="priceGeneratorCtrl.itemToAdd" required="required">
+
+                                    <md-optgroup label="Catégorie A">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catA">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie A'">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catAPrime">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie B">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catB">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie C">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catC">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie D">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catD">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                    <md-optgroup label="Catégorie E">
+                                        <md-option ng-value="price"
+                                                   ng-repeat="price in priceGeneratorCtrl.pricesViewObject.utility.catE">
+                                            {{::price.days |
+                                            number}} jours / {{::price.km | number}} km : {{::price.price |
+                                            number }} {{::$root.devise}}
+                                        </md-option>
+                                    </md-optgroup>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="col-md-2">
+                                <md-button class="md-raised" ng-click="priceGeneratorCtrl.addCurrentItem()"
+                                           ng-disabled="priceForm.utility.$invalid">Ajouter
+                                </md-button>
+                            </md-input-container>
+                        </form>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+
+            <div class="row">
+                <h3 class="md-subhead text-center">Liste des prix sélectionnés</h3>
+            </div>
+
+            <md-divider></md-divider>
+
+            <div class="col-md-12 scrollable height250 pt15 background-color-light-gray">
+                <div class="panel panel-body"
+                     ng-repeat="priceSelected in priceGeneratorCtrl.pricesSelected track by $index">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <strong>Catégorie {{::priceSelected.category.category}} - {{::priceSelected.days
+                                |
+                                number}} jours - {{::priceSelected.km | number}}
+                                km</strong> : {{::priceSelected.price | number}} {{$root.devise}}
+                        </div>
+                        <div class="col-md-2">
+                            <h5 class="no-margin-bottom no-margin-top pull-right"><i
+                                    class="fa fa-trash color-pink clickable"
+                                    ng-click="priceGeneratorCtrl.removeThisItemSelectedByIndex($index)">
+                                <md-tooltip md-direction="top">
+                                    Supprimer
+                                </md-tooltip>
+                            </i>
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </md-content>
+    </div>
+    <div class="panel-footer">
+        <div class="md-12 text-right">
+            <button style="background-color:#ee6e73; color: #ffffff" class="btn btn-default" ng-click="priceGeneratorCtrl.finish()">
+                Enregistrer
+            </button>
+        </div>
+    </div>
+</div>

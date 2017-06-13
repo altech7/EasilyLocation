@@ -1,0 +1,166 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>
+            Gestion du parc
+        </h1>
+    </div>
+</div>
+
+<div style="padding-top: 20px;"></div>
+
+<div class="row">
+    <div class="col-md-12 text-center medium-bordered">
+        <button style="background-color:#26a69a; color:white;" class="btn btn-lg btn-default"
+                ng-click="addClickListener(client);">
+            Ajouter un véhicule
+        </button>
+    </div>
+</div>
+
+<div class="row text-center" style="opacity: 0.5; color: #ffffff; padding-top: 20px">
+    <div ng-click="filterByCarTypeListener('Utilitaire')" class="btn btn-default col-md-3 col-sm-6">Utilitaire</div>
+    <div ng-click="findAll()" class="btn btn-default col-md-3 col-sm-6">Tous les véhicules</div>
+    <div ng-click="filterByCarTypeListener('Tourisme')" class="btn btn-default col-md-3 col-sm-6">Tourisme</div>
+
+    <div style="z-index: 9999" class="col-md-3 col-sm-6">
+        <div class="input-group">
+
+            <input type="hidden" name="search_param" value="all" id="search_param">
+            <input ng-model="search" type="text" class="btn-default form-control" style="padding-left: 10px" name="x"
+                   placeholder="Recherche avancée">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+        </div>
+    </div>
+</div>
+
+
+<div ng-repeat="item in park | filter:search">
+    <div ng-switch="(($index+1) % 3)">
+        <div class="col-md-4 col-sm-6" style="padding-top: 40px;">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <div ng-if="item.availableDate == null" style="background-color:#26a69a; opacity: 0.7" class="cover"></div>
+                        <div ng-if="item.availableDate != null" style="background-color:#f3989b" class="cover"></div>
+                        <div style="background-color:#607D8B; opacity: 0.8" class="user">
+                            <span class="fa fa-4x fa-car"
+                                  style="color:white; margin-left: 30px; margin-top:33px;"></span>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 style="padding-top:35px;" class="name">Véhicule :<br><strong>{{item.car.brand}}
+                                    {{item.car.model}}</strong></h3>
+                                <h4 style="padding-top:5px; font-size: 18px" class="name">Type : <strong>{{item.car.category.type}}</strong>
+                                </h4>
+                            </div>
+                            <div style="padding-top:30px;">
+                                <div class="text-center">
+                                    <div ng-if="item.availableDate == null" style="color:grey; font-size: 14px; display: inline-block">
+                                        <i style="color:#26a69a"
+                                           class="fa fa-circle"></i>&nbsp;&nbsp;<strong>Disponible</strong>
+                                    </div>
+                                    <div ng-if="item.availableDate != null" style="color:grey; font-size: 14px; display: inline-block">
+                                        <i style="color:#f3989b"
+                                           class="fa fa-circle"></i>&nbsp;&nbsp;<strong>Disponible le : {{item.availableDate | date:'dd/MM/yyyy'}}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end front panel -->
+                    <div class="back">
+                        <div style="background-color:#26a69a; opacity: 0.8" class="header">
+                            <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h5 style="color:white; font-size: 12px; font-weight: 400;">
+                                    <strong>
+                                        {{item.car.category.name}}
+                                    </strong>
+                                </h5>
+                            </div>
+                            <div class="pull-right col-sm-1"
+                                 uib-popover="Désactiver ce véhicule" popover-trigger="mouseenter"
+                                 popover-placement="top-right">
+                                <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                   ng-click="deleteClickListener(item.car)">
+                                    <i style="color: white; font-size:17px" class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="padding-top:10px;" class="content">
+                            <table class="table table-striped" style="font-size:12px;">
+                                <tbody>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>{{item.car.category.type}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Audio</th>
+                                    <td>{{item.car.category.audio}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Moteur</th>
+                                    <td>{{item.car.category.engine}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Tourisme'">
+                                    <th>Boite de vitesses</th>
+                                    <td>{{item.car.category.gearbox}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Tourisme'">
+                                    <th>Nombre de porte(s)</th>
+                                    <td>{{item.car.category.numberOfDoors}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Tourisme'">
+                                    <th>Age requis</th>
+                                    <td>{{item.car.category.minimumAgeForLocation}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Tourisme'">
+                                    <th>Ancienneté du permis</th>
+                                    <td>{{item.car.category.requiredLicensingYearsNumber}}</td>
+                                </tr>
+
+                                <tr ng-if="item.car.category.type == 'Tourisme' && item.car.category.other == null">
+                                    <th>Climatisation</th>
+                                    <td>{{item.car.category.airConditioner}}</td>
+                                </tr>
+                                <tr ng-if="(item.car.category.type === 'Tourisme' && item.car.category.other)">
+                                    <th>Climatisation (+ Autre)</th>
+                                    <td uib-popover="{{item.car.category.climAndOther}}"
+                                        popover-trigger="mouseenter"
+                                        popover-placement="top-right"><i class="fa fa-eye"></i></td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Utilitaire'">
+                                    <th>Assistance de direction</th>
+                                    <td>{{item.car.category.powerSteering}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Utilitaire'">
+                                    <th>Nombre de porte(s) latérale(s)</th>
+                                    <td>{{item.car.category.nbLateralDoors}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Utilitaire'">
+                                    <th>Nombre de place(s)</th>
+                                    <td>{{item.car.category.nbPlaces}}</td>
+                                </tr>
+                                <tr ng-if="item.car.category.type == 'Tourisme'">
+                                    <th>Passager(s) et bagage(s)</th>
+                                    <td uib-popover="{{item.car.category.numberOfPassengersAndBaggage}}"
+                                        popover-trigger="mouseenter"
+                                        popover-placement="top-right"><i class="fa fa-eye"></i></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end back panel -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end card-container -->
+        </div>
+        <!-- end col sm 3 -->
+    </div>
+</div>

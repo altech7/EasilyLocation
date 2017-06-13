@@ -1,0 +1,107 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" ng-class=icon></span>
+        </h1>
+    </div>
+
+    <div class="panel-body">
+        <form class="form-horizontal" name="carForm">
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : carForm.brand.$invalid && carForm.brand.$dirty }">
+                <label for="brand" class="col-sm-2 control-label"><strong>Marque</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="brand" name="brand" placeholder="Saisissez une marque de véhicule"
+                           ng-model="car.brand" required="required">
+                </div>
+                <p ng-show="carForm.brand.$error.required && carForm.brand.$dirty"
+                   class="help-block">
+                    Veuillez saisir une marque de véhicule.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : carForm.model.$invalid && carForm.model.$dirty }">
+                <label for="model" class="col-sm-2 control-label"><strong>Modèle</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="model" name="model"
+                           placeholder="Saisissez un modèle de la marque saisie"
+                           ng-model="car.model" required="required">
+                </div>
+                <p ng-show="carForm.model.$error.required && carForm.model.$dirty"
+                   class="help-block">
+                    Veuillez saisir un modèle de véhicule.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : carForm.agency.$invalid && carForm.model.$dirty }">
+                <label for="agencies" class="col-sm-2 control-label"><strong>Son agence</strong></label>
+
+                <div class="col-sm-10">
+                    <select class="form-control" ng-model="car.agency" name="agencies" id="agencies" required="required">
+                        <option ng-repeat="agency in agencies" value="{{agency.id}}">
+                            {{agency.name}}
+                        </option>
+                    </select>
+                </div>
+                <p ng-show="carForm.agency.$error.required && carForm.agency.$dirty"
+                   class="help-block">
+                    Veuillez saisir une agence.
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><strong>Type de véhicule</strong></label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="content" ng-model="checked" ng-checked="true" value="tourism" aria-label="Toggle" checked="checked">Tourisme
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="content" ng-model="checked" value="utility" aria-label="Toggle">Utilitaire
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><strong>Catégorie</strong></label>
+                <div class="col-sm-10">
+                    <div ng-show="checked == 'tourism'">
+                        <select class="form-control" name="category" id="categoryT" ng-model="car.category" required="required">
+                            <option ng-repeat="category in categoriesTourism" value="{{category._id}}">
+                                {{category.name}}
+                            </option>
+                        </select>
+                    </div>
+                    <div ng-show="checked == 'utility'">
+                        <select class="form-control" name="categoryU" id="categoryU" ng-model="car.category"
+                                required="required">
+                            <option ng-repeat="category in categoriesUtility" value="{{category._id}}">
+                                {{category.name}}
+                            </option>
+                        </select>
+                    </div>
+                    <div ng-hide="checked == 'tourism' || checked == 'utility'">
+                        <select class="form-control" name="category" ng-model="car.category" required="required">
+                            <option ng-repeat="category in categoriesTourism" value="{{category._id}}">
+                                {{category.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="panel-footer text-right">
+        <button ng-disabled="carForm.$invalid"
+                style="background-color:#ee6e73;" class="btn btn-primary" ng-click="ok()">{{action}}
+        </button>
+        <button style="background-color:#26a69a;color:white;" class="btn btn-default" ng-click="cancel()">Fermer
+        </button>
+    </div>
+</div>

@@ -1,0 +1,223 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>
+            Gestion des locations
+        </h1>
+    </div>
+</div>
+
+<div style="padding-top:20px;"></div>
+
+<div class="row">
+    <div class="col-md-12 text-center medium-bordered">
+        <button style="background-color:#26a69a; color:white;" class="btn btn-lg btn-default"
+                ng-click="addClickListener(location);">
+            Ajouter une location
+        </button>
+    </div>
+</div>
+
+<div ng-repeat="model in locationsDTO track by $index">
+    <div ng-switch="(($index+1) % 3)">
+        <div class="col-md-4 col-sm-6" style="padding-top: 40px;">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <div ng-if="model.location.state == 'Fermée'" style="background-color:#f3989b;"
+                             class="cover"></div>
+                        <div ng-if="model.location.state == 'En cours'" style="background-color:#26a69a; opacity: 0.7"
+                             class="cover"></div>
+                        <div ng-if="model.location.state == 'À venir'" style="background-color:#3D5AFE; opacity: 0.5"
+                             class="cover"></div>
+                        <div style="background-color:#607D8B; opacity: 0.8" class="user">
+                            <span class="fa fa-4x fa-file-text-o"
+                                  style="color:white; margin-left: 38px; margin-top:33px;"></span>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 style="padding-top:6px;" class="name">Client : <strong>{{model.client.lastName}}
+                                    {{model.client.firstName}}</strong></h3>
+
+                                <h2 ng-if="model.location.state == 'Fermée'" style="padding-top:20px;" class="name">
+                                    Prix : <strong>{{(model.location.location.price + model.location.location.pricePenalty) | number}} &euro;</strong>
+                                </h2>
+                                <h2 ng-if="model.location.state == 'À venir' || model.location.state == 'En cours'" style="padding-top:20px;" class="name">
+                                    Prix : <strong>{{(model.location.location.price) | number}} &euro;</strong>
+                                </h2>
+
+                                <div style="padding-top: 20px; font-size: 15px; padding-left: 10px;" class="name">
+                                    <i ng-if="model.location.state == 'Fermée'" class="fa fa-circle"
+                                       style="color:#E57373"></i></span>
+                                    <i ng-if="model.location.state == 'En cours'" class="fa fa-circle"
+                                       style="color:#26a69a"></i></span>
+                                    <i ng-if="model.location.state == 'À venir'" class="fa fa-circle"
+                                       style="color:#3f51B5; opacity: 0.5"></i></span>
+                                    <strong>{{model.location.state}}</strong><span style="padding-left: 10px;">
+
+                                </div>
+                            </div>
+                            <div style="padding-top:30px;">
+                                <div class="firstFooter row" style="font-size:5px;">
+                                    <div class="col-sm-7">
+                                        <a>
+                                            <i style="color: #26a69a; text-align:left; cursor:pointer;"
+                                               class="fa fa-calendar fa-4x">&nbsp;&nbsp;</i>
+
+                                            <div style="color:grey; font-size: 11px; display: inline-block"><strong>{{model.location.location.dateStart
+                                                | date : 'dd/MM/yyyy'}}</strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <a>
+                                            <i style="color: #f3989b; text-align:right; cursor:pointer;"
+                                               class="fa fa-calendar-times-o fa-4x">&nbsp;&nbsp;</i>
+
+                                            <div style="color:grey; font-size: 11px; display: inline-block"><strong>{{model.location.location.dateEnd
+                                                | date : 'dd/MM/yyyy'}}</strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end front panel -->
+                    <div class="back">
+                        <div style="background-color:#26a69a; opacity: 0.8" class="header">
+                            <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h5 style="color:white; font-size: 12px; font-weight: 400;padding-bottom: 10px;">
+                                    <strong><i class="fa fa-car"></i>&nbsp;&nbsp;&nbsp;{{model.location.location.car.brand}}
+                                        {{model.location.location.car.model}}</strong>
+                                </h5>
+                            </div>
+
+                            <!--<div ng-if="model.location.state == 'À venir' || model.location.state == 'En cours'"-->
+                                 <!--class="pull-right col-sm-1"-->
+                                 <!--uib-popover="Editer cette location" popover-trigger="mouseenter"-->
+                                 <!--popover-placement="top-right">-->
+                                <!--<a id="edit" style="cursor:pointer;">-->
+                                    <!--<i style="color: white; font-size:17px;" class="fa fa-pencil"></i>-->
+                                <!--</a>-->
+                            <!--</div>-->
+
+                            <div ng-if="model.location.state == 'À venir' || model.location.state == 'En cours'" class="pull-right col-sm-1"
+                                 uib-popover="Ajouter un prix manuellement" popover-trigger="mouseenter"
+                                 popover-placement="top-right">
+                                <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                   ng-click="addClickListenerForGeneratePrice(model.location.location, model.client)">
+                                    <i style="color: white; font-size:17px" class="fa fa-euro"></i>
+                                </a>
+                            </div>
+
+                            <div ng-if="model.location.state == 'Fermée'" class="pull-right col-sm-1"
+                                 uib-popover="Archiver cette location" popover-trigger="mouseenter"
+                                 popover-placement="top-right">
+                                <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                   ng-click="archiveListener(model.location.location, model.client)">
+                                    <i style="color: white; font-size:17px" class="fa fa-archive"></i>
+                                </a>
+                            </div>
+
+                            <div ng-if="model.location.state == 'À venir'" class="pull-right col-sm-1"
+                                 uib-popover="Confirmer cette location" popover-trigger="mouseenter"
+                                 popover-placement="top-right">
+                                <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                   ng-click="confirmListener(model.location.location, model.client)">
+                                    <i style="color: white; font-size:17px" class="fa fa-check"></i>
+                                </a>
+                            </div>
+
+                            <div ng-if="model.location.state == 'En cours'" class="pull-right col-sm-1"
+                                 uib-popover="Clotûrer cette location" popover-trigger="mouseenter"
+                                 popover-placement="top-right">
+                                <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                   ng-click="clotureListener(model.location.location, model.client)">
+                                    <i style="color: white; font-size:17px" class="fa fa-times"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div style="padding-top:10px;" class="content">
+                            <table class="table table-striped" style="font-size:12px;">
+                                <tbody>
+                                <tr>
+                                    <th>Client</th>
+                                    <td>{{model.client.lastName}} {{model.client.firstName}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Période</th>
+                                    <td>{{model.location.location.dateStart | date : 'dd/MM/yyyy'}} -
+                                        {{model.location.location.dateEnd | date : 'dd/MM/yyyy'}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Agence de départ</th>
+                                    <td>{{model.location.location.agenceStart.name}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Agence d'arrivée</th>
+                                    <td>{{model.location.location.agenceEnd.name}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Durée</th>
+                                    <td>{{model.location.location.duration}}</td>
+                                </tr>
+                                <tr ng-if="model.location.location.kmsPenalty == null">
+                                    <th>Kms effectués</th>
+                                    <td>{{model.location.location.kms}} kms</td>
+                                </tr>
+                                <tr ng-if="model.location.location.kmsPenalty != null">
+                                    <th>Kms & pénalités</th>
+                                    <td>{{model.location.location.kms}} kms <span style="color: #f3989b">( + {{model.location.location.kmsPenalty}} kms )</span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="model.location.location.pricePenalty == null">
+                                    <th>Prix</th>
+                                    <td>{{model.location.location.price | number}} &euro;</td>
+                                </tr>
+                                <tr ng-if="model.location.location.pricePenalty != null">
+                                    <th>Prix & pénalités</th>
+                                    <td>{{model.location.location.price | number}} &euro; <span style="color: #f3989b">( + {{model.location.location.pricePenalty | number}} &euro; )</span>
+                                </tr>
+                                <tr ng-if="model.location.state == 'Fermée' && model.location.location.pricePenalty != null">
+                                    <th>Prix total</th>
+                                    <td>{{(model.location.location.price + model.location.location.pricePenalty) | number}} &euro;</td>
+                                </tr>
+                                <tr ng-if="model.location.state != 'Fermée'">
+                                    <th>Etat</th>
+                                    <td>{{model.location.state}}</td>
+                                </tr>
+                                <tr ng-if="model.location.state == 'Fermée'">
+                                    <th>Facture</th>
+                                    <td>
+                                        <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                           class="fa fa-file-pdf-o fa-2x"
+                                           ng-click="generateFactureListener(model.client, model.location.location)"
+                                           style="cursor:pointer;"></a>&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                                <tr ng-if="model.location.state == 'À venir'">
+                                    <th>Devis</th>
+                                    <td>
+                                        <a style="color:#26a69a; font-size:15px; cursor:pointer"
+                                           class="fa fa-file-pdf-o fa-2x"
+                                           ng-click="generateDevisListener(model.client, model.location.location)"
+                                           style="cursor:pointer;"></a>&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end back panel -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end card-container -->
+        </div>
+        <!-- end col sm 3 -->
+    </div>
+</div>

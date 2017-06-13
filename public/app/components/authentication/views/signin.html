@@ -1,0 +1,31 @@
+<div class="col-sm-6 col-sm-offset-3">
+    <h1 class="h1-responsive"><span class="fa fa-sign-in"></span> Connexion</h1>
+    <!-- LOGIN FORM -->
+    <div ng-show="$root.error" class="alert alert-warning" role="alert">{{$root.error}}</div>
+    <form role="form" ng-submit="signin()" name="signinForm">
+        <div class="form-group" ng-class="{ 'has-error' : signinForm.login.$invalid && signinForm.login.$dirty }">
+            <label for="login">Login</label>
+            <input id="login" type="text" class="form-control" name="login" ng-model="loginForm.login"
+                   required="required">
+            <p ng-show="signinForm.login.$error.required && signinForm.login.$dirty" class="help-block">Veuillez entrer
+                votre adresse email.</p>
+            <p ng-show="signinForm.login.$invalid && !signinForm.login.$error.required" class="help-block">Veuillez
+                entrer une adresse email valide.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : signinForm.password.$invalid && signinForm.password.$dirty }">
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" class="form-control" name="password" ng-model="loginForm.password"
+                   required="required">
+            <p ng-show="signinForm.password.$error.required && signinForm.password.$dirty" class="help-block">Veuillez
+                entrer votre mot de passe.</p>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" style="background-color:#26a69a; color:white;" class="btn btn-classic btn-lg btn-default" ng-disabled="signinForm.$invalid">Se connecter</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <p>Ou aller à <a ui-sref="home">l'accueil</a>.</p>
+
+</div>

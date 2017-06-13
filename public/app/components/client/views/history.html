@@ -1,0 +1,46 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" class="fa fa-history"></span>
+        </h1>
+    </div>
+
+    <div ng-if="closedLocations.length > 0" ng-repeat="location in closedLocations">
+        <div class='row'>
+            <div class="col-md-12">
+                <table class="table table-striped" style="font-size:12px;">
+                    <thead style="background-color: #607D8B; opacity: 0.5; color:#ffffff;">
+                    <tr>
+                        <th>Période</th>
+                        <th>Agence de début</th>
+                        <th>Agence de fin</th>
+                        <th>Voiture</th>
+                        <th>Kms</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{location.dateStart | date: 'dd/MM/yyyy'}} - {{location.dateEnd | date: 'dd/MM/yyyy'}}</td>
+
+                        <td>{{location.agenceStart.name}} ({{location.agenceStart.place}})</td>
+                        <td>{{location.agenceEnd.name}} ({{location.agenceStart.place}})</td>
+                        <td>{{location.car.brand}} {{location.car.model}}</td>
+                        <td>{{location.kms}}</td>
+                        <td ng-if="location.pricePenalty != null" >{{location.price + location.pricePenalty | number}} &euro;</td>
+                        <td ng-if="location.pricePenalty == null">{{location.price | number}} &euro;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div ng-if="closedLocations.length === 0">
+        <h3 class="text-center" style="font-size: 25px">Aucun historique pour ce client</h3>
+    </div>
+
+    <div class="panel-footer text-right">
+        <button style="background-color:#ee6e73;color:white;" class="btn btn-default" ng-click="cancel()">Fermer
+        </button>
+    </div>
+</div>

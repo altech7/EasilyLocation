@@ -1,0 +1,36 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" class="fa fa-close"></span>
+        </h1>
+    </div>
+
+    <div class="panel-body">
+        <form class="form-horizontal" name="clotureForm">
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clotureForm.kms.$invalid && clotureForm.kms.$dirty }">
+                <label for="kms" class="col-sm-2 control-label"><strong>Kms en pénalités</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="number" min="0" class="form-control" id="kms" name="kms"
+                           placeholder="Saisissez les kms en pénalités si existant."
+                           ng-model="kms" required="required">
+                </div>
+                <p ng-show="clotureForm.kms.$error.required && clotureForm.kms.$dirty"
+                   class="help-block">
+                    Veuillez saisir les kms en pénalités si existant.
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="panel-footer text-right">
+        <button ng-disabled="clotureForm.$invalid"
+                style="background-color:#ee6e73;" class="btn btn-primary" ng-click="ok()">{{action}}
+        </button>
+        <button style="background-color:#26a69a;color:white;" class="btn btn-default" ng-click="cancel()">Fermer
+        </button>
+    </div>
+</div>

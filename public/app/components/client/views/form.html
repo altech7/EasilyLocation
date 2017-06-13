@@ -1,0 +1,101 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" ng-class=icon></span>
+        </h1>
+    </div>
+
+    <div class="panel-body">
+        <form class="form-horizontal" name="clientForm">
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clientForm.lastName.$invalid && clientForm.lastName.$dirty }">
+                <label for="firstName" class="col-sm-2 control-label"><strong>Nom</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Saisissez un nom"
+                           ng-model="client.lastName" required="required">
+                </div>
+                <p ng-show="clientForm.lastName.$error.required && clientForm.lastName.$dirty"
+                   class="help-block">
+                    Veuillez saisir un nom.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clientForm.firstName.$invalid && clientForm.firstName.$dirty }">
+                <label for="firstName" class="col-sm-2 control-label"><strong>Prénom</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                           placeholder="Saisissez un prénom"
+                           ng-model="client.firstName" required="required">
+                </div>
+                <p ng-show="clientForm.firstName.$error.required && clientForm.firstName.$dirty"
+                   class="help-block">
+                    Veuillez saisir un prénom.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clientForm.address.$invalid && clientForm.address.$dirty }">
+                <label for="address" class="col-sm-2 control-label"><strong>Adresse</strong></label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="address" name="address"
+                           placeholder="Sasissez une adresse"
+                           ng-model="client.address" required="required">
+                </div>
+                <p ng-show="clientForm.address.$error.required && clientForm.address.$dirty"
+                   class="help-block">
+                    Veuillez saisir une adresse.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clientForm.dateOfBirth.$invalid && clientForm.dateOfBirth.$dirty }">
+                <label for="dateOfBirth" class="col-sm-2 control-label"><strong>Date de naissance</strong></label>
+
+                <div class="col-sm-10 input-group date">
+                    <input type="date" class="form-control" id="dateOfBirth"
+                           name="dateOfBirth"
+                           placeholder="Saisissez une date"
+                           ng-model="client.dateOfBirth" required="required">
+                    <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+                </div>
+                <p ng-show="clientForm.dateOfBirth.$error.required && clientForm.dateOfBirth.$dirty"
+                   class="help-block">
+                    Veuillez saisir une date de naissance.
+                </p>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : clientForm.dateDriverLicence.$invalid && clientForm.dateDriverLicence.$dirty }">
+                <label for="dateDriverLicence" class="col-sm-2 control-label"><strong>Obtention du
+                    permis</strong></label>
+
+                <div class="col-sm-10 input-group date">
+                    <input type="date" class="form-control input-append date"
+                           id="dateDriverLicence" name="dateDriverLicence"
+                           placeholder="Saisissez une date"
+                           ng-model="client.dateDriverLicence" required="required">
+                    <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+
+                </div>
+                <p ng-show="clientForm.dateDriverLicence.$error.required && clientForm.dateDriverLicence.$dirty"
+                   class="help-block">
+                    Veuillez saisir une date d'obtention du permis de conduire.
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="panel-footer text-right">
+        <button ng-disabled="clientForm.$invalid"
+                style="background-color:#ee6e73;" class="btn btn-primary" ng-click="ok()">{{action}}
+        </button>
+        <button style="background-color:#26a69a;color:white;" class="btn btn-default" ng-click="cancel()">Fermer
+        </button>
+    </div>
+</div>

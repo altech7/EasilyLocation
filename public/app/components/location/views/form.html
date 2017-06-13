@@ -1,0 +1,267 @@
+<div class="centered panel panel-default without-margin">
+    <div style="background-color:#26a69a;color:white;" class="panel-heading text-center">
+        <h1 class="color-white">
+            <span style="color:white" class="fa fa-file-text"></span>
+        </h1>
+    </div>
+    <div class="panel-body">
+        <wizard on-finish="finishedWizard()">
+            <wz-step wz-title="Critères">
+                <h3 class="no-margin-top text-center"></h3>
+
+                <form class="form-horizontal" name="locationForm">
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.client.$invalid && locationForm.client.$dirty }">
+                        <label for="client" class="col-sm-4 control-label"><strong>Client :</strong></label>
+
+                        <div class="col-sm-7">
+                            <select id="client"
+                                    name="client"
+                                    ng-model="locationFormModel.client"
+                                    class="form-control"
+                                    required="required">
+                                <option ng-repeat="client in clients" value="{{client._id}}">
+                                    {{client.lastName}} {{client.firstName}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.startAgency.$invalid && locationForm.startAgency.$dirty }">
+                        <label for="client" class="col-sm-4 control-label"><strong>Agence de départ :</strong></label>
+
+                        <div class="col-sm-7">
+                            <select id="startAgency" name="startAgency"
+                                    ng-model="locationFormModel.startAgency"
+                                    class="form-control"
+                                    required="required">
+                                <option ng-repeat="agency in agencies" value="{{agency.id}}">
+                                    {{agency.name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.hoursStart.$invalid && locationForm.hoursStart.$dirty }">
+                        <label for="hoursStart" class="col-sm-4 control-label"><strong>Heure de départ
+                            :</strong></label>
+
+                        <div class="col-sm-7">
+                            <input type="number" max="23" min="1" class="form-control" id="hoursStart" name="hoursStart"
+                                   placeholder="Saisissez l'heure de départ"
+                                   ng-model="locationFormModel.hoursStart" required="required">
+                        </div>
+                        <p style="display: inline-block"
+                           ng-show="locationForm.hoursStart.$error.required && locationForm.hoursStart.$dirty"
+                           class="help-block">
+                            Veuillez saisir l'heure de départ.
+                        </p>
+                    </div>
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.periodsStep.startDate.$invalid && locationForm.periodsStep.startDate.$dirty }">
+                        <label for="startDate" class="col-sm-4 control-label"><strong>Date de départ :</strong></label>
+
+                        <div class="col-sm-7">
+                            <md-datepicker
+                                    id="startDate"
+                                    name="startDate"
+                                    ng-model="locationFormModel.startDate"
+                                    md-min-date="startDateProperties.minDate"
+                                    md-max-date="startDateProperties.maxDate"
+                                    required="required"
+                                    ng-change="refreshEndDateRange()"
+                                    md-open-on-focus></md-datepicker>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.agencyStep.endAgency.$invalid && locationForm.agencyStep.endAgency.$dirty }">
+                        <label for="client" class="col-sm-4 control-label"><strong>Agence d'arrivée :</strong></label>
+
+                        <div class="col-sm-7">
+                            <select id="endAgency" name="endAgency"
+                                    ng-model="locationFormModel.endAgency"
+                                    class="form-control"
+                                    required="required">
+                                <option ng-repeat="agency in agencies" value="{{agency.id}}">
+                                    {{agency.name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.hoursEnd.$invalid && locationForm.hoursEnd.$dirty }">
+                        <label for="hoursEnd" class="col-sm-4 control-label"><strong>Heure d'arrivée :</strong></label>
+
+                        <div class="col-sm-7">
+                            <input type="number" max="23" min="1" class="form-control" id="hoursEnd" name="hoursEnd"
+                                   placeholder="Saisissez l'heure d'arrivée"
+                                   ng-model="locationFormModel.hoursEnd" required="required">
+                        </div>
+                        <p style="display: inline-block"
+                           ng-show="locationForm.hoursEnd.$error.required && locationForm.hoursEnd.$dirty"
+                           class="help-block">
+                            Veuillez saisir l'heure de d'arrivée.
+                        </p>
+                    </div>
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.periodsStep.endDate.$invalid && locationForm.periodsStep.endDate.$dirty }">
+                        <label for="endDate" class="col-sm-4 control-label"><strong>Date d'arrivée :</strong></label>
+
+                        <div class="col-sm-7">
+                            <md-datepicker
+                                    id="endDate"
+                                    name="endDate"
+                                    ng-model="locationFormModel.endDate"
+                                    md-min-date="endDateProperties.minDate"
+                                    required="required"
+                                    ng-change="refreshStartDateRange()"
+                                    md-open-on-focus></md-datepicker>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : locationForm.kms.$invalid && locationForm.kms.$dirty }">
+                        <label for="kms" class="col-sm-4 control-label"><strong>Kilomètres :</strong></label>
+
+                        <div class="col-sm-7">
+                            <input type="number" class="form-control" id="kms" name="ms"
+                                   placeholder="Saisissez le nombre de Kms prévus"
+                                   ng-model="locationFormModel.kms" required="required">
+                        </div>
+                        <p style="display: inline-block"
+                           ng-show="locationForm.kms.$error.required && locationForm.kms.$dirty"
+                           class="help-block">
+                            Veuillez saisir le nombre de kms prévus.
+                        </p>
+                    </div>
+                </form>
+
+                <div class="text-right" style="padding-top: 20px; padding-bottom: 20px">
+                    <button class="btn  pull-left pink" ng-click="onCancel()"><i class="fa fa-close"></i></button>
+                    <button class="btn blue" ng-click="nextStep()"
+                            ng-disabled="locationForm.$invalid"><i class="fa fa-long-arrow-right"></i>
+                    </button>
+                </div>
+            </wz-step>
+
+            <wz-step wz-title="Véhicules">
+
+                <form class="form-horizontal" name="locationForm">
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"><strong>Type</strong></label>
+
+                        <div class="col-sm-7">
+                            <label class="radio-inline">
+                                <input type="radio" name="content" ng-model="checked" ng-checked="true" value="tourism"
+                                       aria-label="Toggle" checked="checked">Tourisme
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="content" ng-model="checked" value="utility"
+                                       aria-label="Toggle">Utilitaire
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"><strong>Véhicule</strong></label>
+
+                        <div class="col-sm-7">
+                            <div ng-show="checked == 'tourism'">
+                                <select class="form-control" name="category" id="categoryT"
+                                        ng-model="locationFormModel.car"
+                                        required="required">
+                                    <option ng-repeat="car in carsTourism" value="{{car._id}}">
+                                        {{car.brand}} {{car.model}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div ng-show="checked == 'utility'">
+                                <select class="form-control" name="categoryU" id="categoryU"
+                                        ng-model="locationFormModel.car"
+                                        required="required">
+                                    <option ng-repeat="car in carsUtility" value="{{car._id}}">
+                                        {{car.brand}} {{car.model}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div ng-hide="checked == 'tourism' || checked == 'utility'">
+                                <select class="form-control" name="category" ng-model="locationFormModel.car"
+                                        required="required">
+                                    <option ng-repeat="car in carsTourism" value="{{car._id}}">
+                                        {{car.brand}} {{car.model}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div ng-if="carsComing.length > 0" style="padding-top: 20px">
+                        <md-toolbar class="md-theme-light text-center">
+                            <h3 class="md-toolbar-tools blue">
+                                <span>Liste des véhicules non disponibles</span>
+                            </h3>
+                        </md-toolbar>
+                        <md-content>
+                            <md-list ng-if="carsComing.length > 0" class="scrollable">
+                                <md-list-item class="md-3-line" ng-repeat="item in carsComing">
+                                    <div style="padding-right: 38px; color: #f3989b;
+    padding-top: 28px;"><i class="fa fa-car fa-2x"></i></div>
+                                    <div class="md-list-item-text" style="color: grey;">
+                                        <h3><strong>{{item.car.model}} {{item.car.brand}}</strong></h3>
+                                        <h4>Disponible le : <strong>{{item.availableDate | date :
+                                            'dd/MM/yyyy'}}</strong></h4>
+                                    </div>
+                                    <md-divider ng-if="!$last"></md-divider>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </div>
+
+                </form>
+
+                <div class="text-right" style="padding-top: 4px; padding-bottom: 20px">
+                    <button class="btn pull-left pink" ng-click="previousStep()"><i class="fa fa-long-arrow-left"></i>
+                    </button>
+                    <button class="btn blue" ng-click="nextStep()"
+                            ng-disabled="locationForm.$invalid"><i class="fa fa-long-arrow-right"></i>
+                    </button>
+                </div>
+            </wz-step>
+
+
+            <wz-step wz-title="Confirmation">
+                <div class="text-center">
+                    <h3>Prix Total: </h3>
+
+                    <p ng-model="locationFormModel.price" style="font-size: 22px;">{{price | number}} &euro;</p>
+                </div>
+
+                <div class="text-center" style="padding-top: 12px">
+                    <div style="padding-top: 20px;">
+                        <button ng-click="ok()" style="background-color:#26a69a; width: 250px; color:white;"
+                                class="btn btn-lg btn-default">Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-right" style="padding-top: 20px; padding-bottom: 20px">
+                    <button class="btn pull-left pink" ng-click="previousStep()"><i class="fa fa-long-arrow-left"></i>
+                    </button>
+                </div>
+            </wz-step>
+
+
+        </wizard>
+    </div>
+</div>
