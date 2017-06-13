@@ -1,0 +1,648 @@
+{
+  "park": [
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Twingo",
+      "category": "1",
+      "name": "Citadine",
+      "numberOfDoors": [
+        3
+      ],
+      "engine": [
+        "Essence"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Oui"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Nissan",
+      "model": "Micra",
+      "category": "1",
+      "name": "Citadine",
+      "numberOfDoors": [
+        3
+      ],
+      "engine": [
+        "Essence"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Oui"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Peugeot",
+      "model": "106",
+      "category": "1",
+      "name": "Citadine",
+      "numberOfDoors": [
+        3
+      ],
+      "engine": [
+        "Essence"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Oui"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Opel",
+      "model": "Corsa",
+      "category": "2",
+      "name": "Économique",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages ou 4 passagers avec petits bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Clio",
+      "category": "2",
+      "name": "Économique",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages ou 4 passagers avec petits bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Punto",
+      "category": "2",
+      "name": "Économique",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages ou 4 passagers avec petits bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Mégane",
+      "category": "3",
+      "name": "Compactes",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "4 à 5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Peugeot",
+      "model": "307",
+      "category": "3",
+      "name": "Compactes",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "4 à 5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Stilo",
+      "category": "3",
+      "name": "Compactes",
+      "numberOfDoors": [
+        3,
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "4 à 5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Nissan",
+      "model": "Primera",
+      "category": "4",
+      "name": "Berlines standard",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Alpha",
+      "model": "156",
+      "category": "4",
+      "name": "Berlines standard",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Opel",
+      "model": "Vectra",
+      "category": "4",
+      "name": "Berlines standard",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 passagers avec bagages légers",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 1,
+      "airConditioner": "Au choix"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Citroen",
+      "model": "Picasso",
+      "category": "5",
+      "name": "Familiales",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "Au choix",
+      "others": true
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Nissan",
+      "model": "Almeratino",
+      "category": "5",
+      "name": "Familiales",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "Au choix",
+      "others": true
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Opel",
+      "model": "Zaphira",
+      "category": "5",
+      "name": "Familiales",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Essence",
+        "Diesel"
+      ],
+      "audio": [
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "Au choix",
+      "others": true
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Peugeot",
+      "model": "806",
+      "category": "6",
+      "name": "Monospaces",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "oui"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Citroen",
+      "model": "C8",
+      "category": "6",
+      "name": "Monospaces",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "oui"
+    },
+    {
+      "type": "Tourisme",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Espace",
+      "category": "6",
+      "name": "Monospaces",
+      "numberOfDoors": [
+        5
+      ],
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7",
+        "CD"
+      ],
+      "gearbox": "manuelle",
+      "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+      "minimumAgeForLocation": 21,
+      "requiredLicensingYearsNumber": 5,
+      "airConditioner": "oui"
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Kangoo",
+      "category": "A",
+      "name": "3m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 2
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Laguna",
+      "category": "A",
+      "name": "3m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 2
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "A prime",
+      "name": "4 a 5 m3",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3",
+      "nbPlaces": 2
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Expert",
+      "model": "Peugeot",
+      "category": "A prime",
+      "name": "4 a 5m3",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3",
+      "nbPlaces": 2
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "B",
+      "name": "6 a 7m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Expert",
+      "model": "Peugeot",
+      "category": "B",
+      "name": "6 a 7m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Renault",
+      "model": "Master",
+      "category": "C",
+      "name": "8 a 10m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Ducato",
+      "category": "C",
+      "name": "8 a 10m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Iveco",
+      "model": "4x4",
+      "category": "C",
+      "name": "8 a 10m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Fiat",
+      "model": "Ducato",
+      "category": "D",
+      "name": "12m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Iveco",
+      "model": "Daily",
+      "category": "D",
+      "name": "12m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3 + 1 latérale",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Iveco",
+      "model": "4x4",
+      "category": "E",
+      "name": "20m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3",
+      "nbPlaces": 3
+    },
+    {
+      "type": "Utilitaire",
+      "agence": null,
+      "brand": "Mercedes",
+      "model": "SLA",
+      "category": "E",
+      "name": "20m cube",
+      "engine": [
+        "Diesel"
+      ],
+      "audio": [
+        "Radio K7"
+      ],
+      "assistDirection": true,
+      "nbPorteLaterale": "3",
+      "nbPlaces": 3
+    }
+  ]
+}

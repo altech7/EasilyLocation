@@ -1,0 +1,26 @@
+[
+    {
+        "locations": [],
+        "agent": {
+            "login": "agentEuropcar",
+            "password": "admin"},
+        "place": "Marseille",
+        "name": "Agence Europcar"
+    },
+    {
+        "locations": [],
+        "agent": {
+            "login": "agentHertz",
+            "password": "admin"},
+        "place": "Biarritz",
+        "name": "Agence Hertz"
+    },
+    {
+        "locations": [],
+        "agent": {
+            "login": "agentAvis",
+            "password": "admin"},
+        "place": "Paris",
+        "name": "Agence Avis"
+    }
+]

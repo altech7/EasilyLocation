@@ -1,0 +1,7 @@
+{
+  "development": {
+    "portNumber": "5000",
+    "subDomain": "easilyLocation",
+    "domain": "localhost"
+  }
+}

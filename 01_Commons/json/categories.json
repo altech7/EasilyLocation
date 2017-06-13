@@ -1,0 +1,251 @@
+{
+  "TOURISM": {
+    "value": "0",
+    "libelle": "Tourisme",
+    "categories": [
+      {
+        "type": "Tourisme",
+        "category": "1",
+        "name": "Citadine",
+        "numberOfDoors": [
+          3
+        ],
+        "engine": [
+          "Essence"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages",
+        "minimumAgeForLocation": 21,
+        "requiredLicensingYearsNumber": 1,
+        "airConditioner": "Oui"
+      },
+      {
+        "type": "Tourisme",
+        "category": "2",
+        "name": "Économique",
+        "numberOfDoors": [
+          3,
+          5
+        ],
+        "engine": [
+          "Essence",
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7",
+          "CD"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "2 passagers avec bagages encombrants ou 4 passagers sans bagages ou 4 passagers avec petits bagages",
+        "minimumAgeForLocation": 21,
+        "requiredLicensingYearsNumber": 1,
+        "airConditioner": "Au choix"
+      },
+      {
+        "type": "Tourisme",
+        "category": "3",
+        "name": "Compactes",
+        "numberOfDoors": [
+          3,
+          5
+        ],
+        "engine": [
+          "Essence",
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7",
+          "CD"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "4 à 5 passagers avec bagages légers",
+        "minimumAgeForLocation": 21,
+        "requiredLicensingYearsNumber": 1,
+        "airConditioner": "Au choix"
+      },
+      {
+        "type": "Tourisme",
+        "category": "4",
+        "name": "Berlines standard",
+        "numberOfDoors": [
+          5
+        ],
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "CD"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "5 passagers avec bagages légers",
+        "minimumAgeForLocation": 21,
+        "requiredLicensingYearsNumber": 1,
+        "airConditioner": "Au choix"
+      },
+      {
+        "type": "Tourisme",
+        "category": "5",
+        "name": "Familiales",
+        "numberOfDoors": [
+          5
+        ],
+        "engine": [
+          "Diesel",
+          "Essence"
+        ],
+        "audio": [
+          "CD"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+        "minimumAgeForLocation": 25,
+        "requiredLicensingYearsNumber": 5,
+        "airConditioner": "Au choix",
+        "other": "Toit ouvrant"
+      },
+      {
+        "type": "Tourisme",
+        "category": "6",
+        "name": "Monospaces",
+        "numberOfDoors": [
+          5
+        ],
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7",
+          "CD"
+        ],
+        "gearbox": "manuelle",
+        "numberOfPassengersAndBaggage": "5 avec bagages à 7 sans bagages",
+        "minimumAgeForLocation": 25,
+        "requiredLicensingYearsNumber": 5,
+        "airConditioner": "Oui"
+      }
+    ]
+  },
+  "UTILITY": {
+    "value": "1",
+    "libelle": "Utilitaire",
+    "categories": [
+      {
+        "type": "Utilitaire",
+        "category": "A",
+        "name": "3 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 1,
+        "nbPlaces": 2,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      },
+      {
+        "type": "Utilitaire",
+        "category": "A'",
+        "name": "4 à 5 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 0,
+        "nbPlaces": 2,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      },
+      {
+        "type": "Utilitaire",
+        "category": "B",
+        "name": "6 à 7 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 1,
+        "nbPlaces": 3,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      },
+      {
+        "type": "Utilitaire",
+        "category": "C",
+        "name": "8 à 10 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 1,
+        "nbPlaces": 3,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      },
+      {
+        "type": "Utilitaire",
+        "category": "D",
+        "name": "12 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 1,
+        "nbPlaces": 3,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      },
+      {
+        "type": "Utilitaire",
+        "category": "E",
+        "name": "20 mètres cube",
+        "numberOfDoors": [
+          3
+        ],
+        "nbLateralDoors": 0,
+        "nbPlaces": 3,
+        "engine": [
+          "Diesel"
+        ],
+        "audio": [
+          "Radio K7"
+        ],
+        "powerSteering": [
+          "Oui"
+        ]
+      }
+    ]
+  }
+}

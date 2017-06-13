@@ -1,0 +1,622 @@
+{
+  "UTILITY": {
+    "Categories": {
+      "A": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "43",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "79",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "59",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "109",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "99",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "185",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "229",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "A'": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "55",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "75",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "119",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "129",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "219",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "289",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "B": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "59",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "109",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "89",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "155",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "149",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "265",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "319",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "C": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "69",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "129",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "95",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "159",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "159",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "289",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "329",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "D": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "79",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "145",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "109",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "175",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "189",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "319",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "349",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "E": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "179",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "100",
+          "price": "135",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "1",
+          "km": "500",
+          "price": "209",
+          "weekend": "false",
+          "longWeekend": "true"
+        },
+        {
+          "days": "2",
+          "km": "200",
+          "price": "229",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "1000",
+          "price": "389",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1000",
+          "price": "439",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ]
+    }
+  },
+  "TOURISM": {
+    "Categories": {
+      "1": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "45",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "55",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "65",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "199",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "239",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "89",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "2": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "49",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "59",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "75",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "219",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "249",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "99",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "119",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "3": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "59",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "69",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "85",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "259",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "269",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "109",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "129",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "4": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "65",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "79",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "299",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "329",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "129",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "149",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "5": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "79",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "119",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "369",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "419",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "159",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "179",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ],
+      "6": [
+        {
+          "days": "1",
+          "km": "100",
+          "price": "99",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "250",
+          "price": "119",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "1",
+          "km": "400",
+          "price": "149",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "5",
+          "km": "1250",
+          "price": "449",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "7",
+          "km": "1500",
+          "price": "559",
+          "weekend": "false",
+          "longWeekend": "false"
+        },
+        {
+          "days": "2",
+          "km": "500",
+          "price": "199",
+          "weekend": "true",
+          "longWeekend": "false"
+        },
+        {
+          "days": "4",
+          "km": "800",
+          "price": "239",
+          "weekend": "false",
+          "longWeekend": "true"
+        }
+      ]
+    }
+  }
+}

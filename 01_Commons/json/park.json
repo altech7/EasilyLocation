@@ -1,0 +1,249 @@
+{
+  "cars": [
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Nissan",
+      "model": "Micra",
+      "category": "1"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Punto",
+      "category": "2"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Silo",
+      "category": "3"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Alfa",
+      "model": "156",
+      "category": "4"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Scénic",
+      "category": "5"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Citroen",
+      "model": "C8",
+      "category": "6"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Kangoo",
+      "category": "A"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "Expert",
+      "category": "A'"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "B"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Ducato",
+      "category": "C"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Iveco",
+      "model": "Daily",
+      "category": "D"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Opel",
+      "model": "Corsa",
+      "category": "1"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "206",
+      "category": "2"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "207",
+      "category": "3"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "406",
+      "category": "4"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Multipla",
+      "category": "5"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "806",
+      "category": "6"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Kangoo",
+      "category": "A"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Peugeot",
+      "model": "Expert",
+      "category": "A'"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "B"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Ducato",
+      "category": "C"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Iveco",
+      "model": "Daily",
+      "category": "D"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Mercedes",
+      "model": "Mercedes",
+      "category": "E"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Twingo",
+      "category": "1"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Opel",
+      "model": "Corsa",
+      "category": "2"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Mégane",
+      "category": "3"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Nissan",
+      "model": "Primera",
+      "category": "4"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Opel",
+      "model": "Zaphira",
+      "category": "5"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Ulysse",
+      "category": "6"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Kangoo",
+      "category": "A"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "A'"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Scudo",
+      "category": "B"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Renault",
+      "model": "Master",
+      "category": "C"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Fiat",
+      "model": "Ducato",
+      "category": "D"
+    },
+    {
+      "agence": null,
+      "active": true,
+      "brand": "Iveco",
+      "model": "Iveco",
+      "category": "E"
+    }
+  ]
+}

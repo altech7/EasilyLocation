@@ -1,0 +1,9 @@
+{
+  "development": {
+    "mongoDb": {
+      "name": "EasilyLocation",
+      "host": "localhost",
+      "protocol": "mongodb"
+    }
+  }
+}
